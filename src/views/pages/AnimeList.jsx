@@ -1,15 +1,17 @@
 import React, {useState} from "react";
+import axios from "axios";
 
 export default function AnimeList (){
-    const [info, setInfo] = useState({});
+
     const [text, setText] = useState({text: ''});
+    const [info, setInfo] = useState({});
 
     //buscar as informacoes
     function getInformacoes(){
-        fetch('https://kitsu.io/api/edge/anime?filter[text]='+text+'&page[limit]=20')
-        .then((response) => response.json())
-        .then((response) => {setInfo(response), console.log(response);
-        });
+        axios.get('https://kitsu.io/api/edge/anime?filter[text]='+text+'&page[limit]=20')
+        .then(response => {
+            setInfo(response.data)
+        })
     }
 
     const handlingText = (e) => {
@@ -29,7 +31,7 @@ export default function AnimeList (){
                         <ul className="Anime_List">
                             {info.data.map((anime) => (
                                 <li key={anime.id}>
-                                    <img src={anime.attributes.posterImage.small} alt="" />
+                                    <img src={anime.attributes.posterImage.small} alt={anime.attributes.canonicalTitle} />
                                     <p><b>Titulo:</b> {anime.attributes.canonicalTitle}</p>
                                     <p><b>Status:</b> {anime.attributes.status}</p>
                                     <p><b>Classificação:</b> {anime.attributes.ageRatingGuide}</p>
