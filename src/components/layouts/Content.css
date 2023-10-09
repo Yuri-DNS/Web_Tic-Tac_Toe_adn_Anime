@@ -18,13 +18,18 @@
   
 /* Estilos básicos para o corpo da página */
 body {
+  height: 100vh;
+  font-family: sans-serif;
+  margin: 20px;
+  padding: 0;
+}
+
+:root {
+  margin: 20px;
   background-image: url(https://i.pinimg.com/originals/60/a5/85/60a58511e5c70a418ac743f7df8134fa.gif);
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
-  font-family: sans-serif;
-  margin: 20px;
-  padding: 0;
 }
   
 /* Estilos para os quadrados no tabuleiro do jogo */
