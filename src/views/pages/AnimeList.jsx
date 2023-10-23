@@ -28,7 +28,7 @@ export default function AnimeList (){
     return(
         <>
             <div className="API">
-                <h1>animes</h1>
+                <h1>Animes List</h1>
                 <div>
                     <input type="text" onChange={(e) => handlingText(e)} onKeyDown={(e) => handleKeyDown(e)} placeholder="Nome(ou aleatório)"/>
                     <button onClick={getInformacoes}>Pesquisar</button>
