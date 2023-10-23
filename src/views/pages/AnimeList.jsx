@@ -6,6 +6,13 @@ export default function AnimeList (){
     const [text, setText] = useState({text: ''});
     const [info, setInfo] = useState({});
 
+    // Função para tratar a tecla Enter pressionada
+    function handleKeyDown(e) {
+        if (e.key === "Enter") {
+            getInformacoes();
+        }
+    }
+
     //buscar as informacoes
     function getInformacoes(){
         axios.get('https://kitsu.io/api/edge/anime?filter[text]='+text+'&page[limit]=20')
@@ -23,7 +30,7 @@ export default function AnimeList (){
             <div className="API">
                 <h1>animes</h1>
                 <div>
-                    <input type="text" onChange={(e) => handlingText(e)} placeholder="Principais(ou nome)"></input>
+                    <input type="text" onChange={(e) => handlingText(e)} onKeyDown={(e) => handleKeyDown(e)} placeholder="Nome(ou aleatório)"/>
                     <button onClick={getInformacoes}>Pesquisar</button>
                 </div>
                 <div>

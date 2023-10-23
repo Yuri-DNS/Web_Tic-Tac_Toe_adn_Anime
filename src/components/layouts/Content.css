@@ -112,12 +112,12 @@ body {
   text-align: center;
 }
 
-/* Define estilos para o elemento com a classe "Home" */
+/* Define estilos para o elemento com a classe "Home" 
 .Home{
   text-align: center; 
   text-shadow:  0 0 10px rgb(255, 255, 255);
   color: #201C31;
-}
+}*/
 
 /* Define estilos para o elemento com a classe "API" */
 .API{

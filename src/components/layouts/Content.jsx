@@ -11,8 +11,8 @@ const Content = props => (
     <>
     <aside className='Content'>
         <Routes>
-            <Route path="/" exact element={<Home/>}/>
-            <Route path="/game" element={<Game/>}/>
+            {/* <Route path="/" exact element={<Home/>}/> */}
+            <Route path="/" element={<Game/>}/>
             <Route path="/anime" element={<AnimeList/>}/>
             <Route path="*" element={<NotFound/>}/>
         </Routes>
