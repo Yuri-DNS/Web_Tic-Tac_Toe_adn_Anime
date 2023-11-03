@@ -59,7 +59,7 @@ export default function AnimeList (){
                                     <p><b>Início:</b> {anime.attributes.startDate}</p>
                                     <p><b>Fim:</b> {anime.attributes.endDate}</p>
                                     <p><a href={`https://animesonlinecc.to/search/${encodeURIComponent(anime.attributes.canonicalTitle.split(' ').slice(0, 2).join(' '))}`} target="_blank"><button>Buscar no Animesonline</button></a></p>
-                                    <p><a href={`https://animefire.vip/pesquisar/${encodeURIComponent(anime.attributes.canonicalTitle.split(' ').slice(0, 2).join(' '))}`} target="_blank"><button>Buscar no AnimeFire</button></a></p>
+                                    <p><a href={`https://animefire.vip/pesquisar/${encodeURIComponent(anime.attributes.canonicalTitle.split(' ').slice(0, 2).join('-'))}`} target="_blank"><button>Buscar no AnimeFire</button></a></p>
                                     {/* {`https://animesonlinecc.to/search/${encodeURIComponent(anime.attributes.canonicalTitle.split(' ').slice(0, 2).join(' '))}`} 
                                         
                                         Aqui é feita a busca no endereço indicado apenas das duas primeiras palavras encontras no atributo -> canonicalTitle
