@@ -21,7 +21,8 @@ export default function AnimeList (){
         })
         
         // !! Função para teste !! Mostra o retorno no console como um objeto Javascript
-        /* 
+        /*
+
         if(text) {
             fetch('https://kitsu.io/api/edge/anime?filter[text]='+text+'&page[limit]=20')
              .then((response) => response.json())
@@ -29,6 +30,7 @@ export default function AnimeList (){
                 console.log(response);
              });
         }
+        
         */
     }
 
@@ -56,7 +58,8 @@ export default function AnimeList (){
                                     <p><b>Nº.Ep(Cap):</b> {anime.attributes.episodeCount}</p>
                                     <p><b>Início:</b> {anime.attributes.startDate}</p>
                                     <p><b>Fim:</b> {anime.attributes.endDate}</p>
-                                    <p><a href={`https://animesonlinecc.to/search/${encodeURIComponent(anime.attributes.canonicalTitle.split(' ').slice(0, 2).join(' '))}`} target="_blank"><button>Buscar no AnimesOnline</button></a></p>
+                                    <p><a href={`https://animesonlinecc.to/search/${encodeURIComponent(anime.attributes.canonicalTitle.split(' ').slice(0, 2).join(' '))}`} target="_blank"><button>Buscar no Animesnline</button></a></p>
+                                    <p><a href={`https://animefire.vip/pesquisar/${encodeURIComponent(anime.attributes.canonicalTitle.split(' ').slice(0, 2).join(' '))}`} target="_blank"><button>Buscar no AnimeFire</button></a></p>
                                     {/* {`https://animesonlinecc.to/search/${encodeURIComponent(anime.attributes.canonicalTitle.split(' ').slice(0, 2).join(' '))}`} 
                                         
                                         Aqui é feita a busca no endereço indicado apenas das duas primeiras palavras encontras no atributo -> canonicalTitle
