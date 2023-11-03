@@ -58,11 +58,12 @@ export default function AnimeList (){
                                     <p><b>Nº.Ep(Cap):</b> {anime.attributes.episodeCount}</p>
                                     <p><b>Início:</b> {anime.attributes.startDate}</p>
                                     <p><b>Fim:</b> {anime.attributes.endDate}</p>
-                                    <p><a href={`https://animesonlinecc.to/search/${encodeURIComponent(anime.attributes.canonicalTitle.split(' ').slice(0, 2).join(' '))}`} target="_blank"><button>Buscar no Animesonline</button></a></p>
-                                    <p><a href={`https://animefire.vip/pesquisar/${encodeURIComponent(anime.attributes.canonicalTitle.split(' ').slice(0, 2).join('-'))}`} target="_blank"><button>Buscar no AnimeFire</button></a></p>
-                                    {/* {`https://animesonlinecc.to/search/${encodeURIComponent(anime.attributes.canonicalTitle.split(' ').slice(0, 2).join(' '))}`} 
-                                        
-                                        Aqui é feita a busca no endereço indicado apenas das duas primeiras palavras encontras no atributo -> canonicalTitle
+                                    <p><a href={`https://animesonlinecc.to/search/${encodeURIComponent(anime.attributes.canonicalTitle.toLowerCase().replace(/:/g, '').split(' ').slice(0, 2).join(' '))}`} target="_blank"><button>Buscar no Animesonline</button></a></p>
+                                    <p><a href={`https://animefire.vip/pesquisar/${encodeURIComponent(anime.attributes.canonicalTitle.toLowerCase().replace(/:/g, '').split(' ').slice(0, 2).join('-'))}`} target="_blank"><button>Buscar no AnimeFire</button></a></p>
+                                    {/* {`https://animesonlinecc.to/search/${encodeURIComponent(anime.attributes.canonicalTitle.toLowerCase().replace(/:/g, '').split(' ').slice(0, 2).join(' '))}`}  target="_blank"
+                                        {`https://animefire.vip/pesquisar/${encodeURIComponent(anime.attributes.canonicalTitle.toLowerCase().replace(/:/g, '').split(' ').slice(0, 1))}`} target="_blank"
+
+                                        Aqui é feita a busca no endereço indicado apenas das primeiras palavras (com algumas modificações) encontras no atributo -> canonicalTitle
                                     */}
                                 </li>
                             ))}
